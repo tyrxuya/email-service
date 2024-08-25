@@ -69,7 +69,6 @@ public class ConfirmationOperation extends BaseOperation implements Confirmation
                 })
                 .toEither()
                 .mapLeft(throwable -> Match(throwable).of(
-                        defaultCase(throwable, HttpStatus.I_AM_A_TEAPOT),
                         validateCase(throwable, HttpStatus.BAD_REQUEST)
                 ));
     }
