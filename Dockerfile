@@ -1,5 +1,5 @@
 # Use the official OpenJDK image as the base image
-FROM openjdk:21
+FROM amazoncorretto:21-alpine
 
 # Set the working directory within the container
 WORKDIR /email
